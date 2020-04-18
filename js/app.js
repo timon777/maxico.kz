@@ -12,6 +12,7 @@ $(function() {
   08: Load video
   09: Title animation
   10: Parallax
+  11: Timer
 
   ----------------------------------------------*/
 
@@ -89,6 +90,22 @@ $(function() {
 
     scroll *= 0.5;
     $('.s-main').css('background-position', 'center ' + scroll + 'px');
+  });
+
+
+
+  /*============================================
+  11: Timer
+  ==============================================*/
+  $('.js-timer').each(function(){
+
+    var time = $(this).data('time').split('-');
+    var ts = new Date(time[0], time[1] - 1, time[2], time[3], time[4], time[5]); 
+
+    $(this).countdown({
+      timestamp : ts
+    });
+
   });
 
 
