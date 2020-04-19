@@ -7,7 +7,6 @@ $(function() {
   03: Menu -> menu item active / menu open/close / open submenu
   04: Lazy load
   05: Popup -> popup 
-  06: Form -> form name / mask / check input / form submit / select
   07: Map
   08: Load video
   09: Title animation
@@ -20,30 +19,21 @@ $(function() {
   08: Load video
   ==============================================*/
 
-  $('.s-services').each(function(){
-    var ths = $(this),
-    show = false;
+  setTimeout(function() {
 
-    $(window).scroll(function(){
-      if (!show)
-        if ($(window).scrollTop() > ths.offset().top - $(window).height()) {
+    $('video[data-src]').each(function(){
 
-          ths.find('video[data-src]').each(function(){
+      let str = $(this).attr('data-src');
 
-            let str = $(this).attr('data-src');
+      let src = str.split('|')[0]; 
+      let type = str.split('|')[1]; 
+      $(this).append('<source>');
 
-            let src = str.split('|')[0]; 
-            let type = str.split('|')[1]; 
-            $(this).append('<source>');
+      $(this).find('source').attr('src', src).attr('type', type);
+      $(this).removeAttr('data-src');
+    });
 
-            $(this).find('source').attr('src', src).attr('type', type);
-            $(this).removeAttr('data-src');
-          });
-
-          show = true;
-        }
-      });
-  }); 
+  }, 2000);
 
 
  /*============================================
@@ -56,8 +46,8 @@ $(function() {
 
   function animateHeadline($headlines) {
     $headlines.each(function(){
-    let headline = $(this);
-        setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
+      let headline = $(this);
+      setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
     });
   }
 
@@ -65,16 +55,16 @@ $(function() {
    let nextWord = takeNext($word);
    switchWord($word, nextWord);
    setTimeout(function(){ hideWord(nextWord) }, animationDelay);
-  }
+ }
 
-  function takeNext($word) {
+ function takeNext($word) {
    return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
-  }
+ }
 
-  function switchWord($oldWord, $newWord) {
+ function switchWord($oldWord, $newWord) {
    $oldWord.removeClass('is-visible').addClass('is-hidden');
    $newWord.removeClass('is-hidden').addClass('is-visible');
-  }
+ }
 
 
    /*============================================
@@ -387,80 +377,6 @@ $(function() {
   });
 
 
-  /*============================================
-    06: Form -> form name / mask / check input / form submit / select
-    ==============================================*/
-
-  // form name
-  $('body').on('click', 'a[data-form].js-fancybox', function (e) {
-    e.preventDefault();
-
-    let form = $(this).data('form'),
-    href = $(this).attr('href');
-
-    $(href + ' input[name=form]').val(form);
-  });
-
-  // mask
-  $('input[name=phone]').mask('+7(999) 999 99 99');
-
-  // check input
-  $('.required input, .required textarea').focus(function(){
-    $(this).parents('.input').removeClass('input_error');
-  });
-  $('.required select').change(function(){
-    $(this).parents('.input').removeClass('input_error');
-  });
-  $('.required input, .required textarea').blur(function(){
-    if ($(this).val() == '') $(this).parents('.input').addClass('input_error');
-  });
-
-  // form submit
-  $('.js-form').submit(function(e) {
-    e.preventDefault();
-
-    let f = $(this);
-    $('.input_error', f).removeClass('input_error');
-
-    let error = false;
-
-    $('.required', f).each(function(){
-      let value = $(this).find('input, textarea, select').val();
-      if((value == '') && (typeof value != 'undefined')) {
-        $(this).addClass('input_error');
-        error = true;
-      } 
-    });
-    
-
-    let conditions = $('input[name="conditions"]', f).prop('checked');
-
-    if ((!conditions) && (typeof conditions != "undefined")) {
-      $('input[name="conditions"]', f).parent().find(".input-checkbox__check").addClass('input_error');
-      error = true;
-    }
-
-    if (error)  return false;
-    
-    $.ajax({
-      type: 'POST',
-      url: 'mail.php',
-      data: $(this).serialize()
-    }).done(function() {
-
-      $.fancybox.open('#popup_thanks');
-      f.trigger('reset');
-
-      setTimeout(function () {
-        $.fancybox.close();
-      }, 3000);
-
-    });
-    return false;
-  });
-
-   // select
-   $('select').styler();
  });
 
   /*============================================
@@ -541,5 +457,5 @@ window.onload = function() {
         });
     });
   });
-}, 2000);
+}, 2500);
 }

@@ -7799,7 +7799,7 @@ section,
 
 .b-img {
   display: block;
-  background: #022EA9 center no-repeat;
+  background: #fff center no-repeat;
   background-size: cover;
   position: relative; }
   .b-img::before {
