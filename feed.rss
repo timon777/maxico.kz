@@ -4,20 +4,21 @@
 	<channel>
 		<title>MAXICO IT Компания в Казахстане</title>
 		<link><![CDATA[https://maxico.kz]]></link>
-		<description>MAXICO IT Компания в Казахстане - Безопасные решения для вашего бизнеса</description>
+		<description>MAXICO IT Компания - Безопасные решения для вашего бизнеса в Казахстане, мы занимаемся разработкой сайтов и мобильных приложений</description>
 		<language>ru</language>
-		<pubDate>Mon, 20 Apr 2020 01:10:17 +0300</pubDate>
+		<pubDate>Mon, 20 Apr 2020 22:42:50 +0300</pubDate>
 		<generator>MySitemapGenerator (www.mysitemapgenerator.com)</generator>
 
 		<item turbo="true">
 			<guid isPermaLink="false">3550985470</guid>
-			<title>Безопасные решения для вашего бизнеса</title>
+			<title>Создание web сайтов</title>
 			<link>https://maxico.kz/sozdanie-saitov.html</link>
 			<author>Администратор</author>
 			<category>Новости сайта</category>
-			<description>Безопасные решения для вашего бизнеса</description>
-			<turbo:content><![CDATA[<header>	<h1>Безопасные решения для вашего бизнеса</h1></header><h2>Описание услуги</h2> <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<p>Curabitur pharetra libero luctus est rhoncus, et dictum</h3></p><h3>Возможности</h3><p><img src="https://maxico.kz/img/dest/logo.png"></p>]]></turbo:content>
-			<pubDate>Mon, 20 Apr 2020 01:10:19 +0300</pubDate>
+			<description>Создание сайтов в Казахстане в городах Алматы, Астаны, Караганды, Нур-султан, Атырау, Актау</description>
+			<turbo:content><![CDATA[<header>	<h1>Создание web сайтов</h1></header><h3>Разработка любого уровня сложности сайта отталкиваясь из Ваших ценностей</h3><h3>Возможности</h3><p><img src="https://maxico.kz/img/dest/logo.png"></p>]]></turbo:content>
+			<pubDate>Mon, 20 Apr 2020 22:42:51 +0300</pubDate>
+			<enclosure url="https://maxico.kz/img/dest/logo.png" />
 		</item>
 		<item turbo="true">
 			<guid isPermaLink="false">3150129540</guid>
@@ -27,7 +28,7 @@
 			<category>Новости сайта</category>
 			<description>Безопасные решения для вашего бизнеса</description>
 			<turbo:content><![CDATA[<header>	<h1>Безопасные решения для вашего бизнеса</h1></header><h3>Он будет открыт через:</h3><h3>Приносим извинения за неудобства</h3><p><img src="https://maxico.kz/img/dest/bg/develop-img.png"></p><p><img src="https://maxico.kz/img/dest/logo_white.png"></p><h2>Контакты</h2><p><img src="https://maxico.kz/img/dest/logo_white.png"></p><p>Адрес:</p><p>г. Нур-Султан , ул. Кажымукана 13/1,</p><p>Телефоны:</p><p>Email:</p><p>Спасибо за заявку!</p><p>Наш менеджер свяжется с Вами в ближайшее время.</p>]]></turbo:content>
-			<pubDate>Mon, 20 Apr 2020 01:10:19 +0300</pubDate>
+			<pubDate>Mon, 20 Apr 2020 22:42:51 +0300</pubDate>
 		</item>
 	</channel>
 </rss>
