@@ -207,6 +207,7 @@ $(function() {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1, 
+    lazyLoad: 'ondemand',
     responsive: [
     {
       breakpoint: 991,
@@ -235,6 +236,7 @@ $(function() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1, 
+    lazyLoad: 'ondemand',
     responsive: [
     {
       breakpoint: 991,

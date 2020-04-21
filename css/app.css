@@ -8042,6 +8042,9 @@ section,
 .slick-slide .slick-vertical .slick-slide {
   border: none; }
 
+.slick-cloned .opacity-0 {
+  opacity: 1 !important; }
+
 .slick-arrow {
   cursor: pointer;
   position: absolute;
