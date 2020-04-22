@@ -489,6 +489,12 @@
 		@include lg {
 			display: none;
 		}
+		@include rh (800) {
+			max-height: 650px;
+		}
+		@include rh (750) {
+			max-height: 600px;
+		}
 		img{
 			max-width: none;
 		}
