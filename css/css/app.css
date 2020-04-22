@@ -9691,6 +9691,12 @@ xpush
     @media only screen and (max-width: 991px) {
       .s-main__bg-img {
         display: none; } }
+    @media only screen and (max-height: 799px) {
+      .s-main__bg-img {
+        max-height: 650px; } }
+    @media only screen and (max-height: 749px) {
+      .s-main__bg-img {
+        max-height: 600px; } }
     .s-main__bg-img img {
       max-width: none; }
   .s-main__video {
